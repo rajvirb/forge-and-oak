@@ -1285,3 +1285,114 @@ h1, h2, h3, h4, .brand-title, .footer-title {
     display: none;
   }
 }
+
+/* ==========================================================================
+   HOMEPAGE PORTFOLIO TEASER SECTION
+   ========================================================================== */
+
+.portfolio-teaser-section {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.teaser-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.teaser-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-md);
+}
+
+.teaser-image-wrap {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background-color: var(--bg-surface-elevated);
+}
+
+.teaser-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.teaser-card:hover .teaser-image-wrap img {
+  transform: scale(1.06);
+}
+
+.teaser-card-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, rgba(18, 20, 23, 0.2) 0%, rgba(18, 20, 23, 0.85) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.teaser-pill {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0E0F11;
+  background: var(--accent-gold);
+  padding: 0.25rem 0.65rem;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.teaser-view-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  letter-spacing: 0.05em;
+  transition: var(--transition);
+}
+
+.teaser-card:hover .teaser-view-link {
+  color: var(--accent-gold-light);
+  transform: translateX(4px);
+}
+
+.teaser-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.teaser-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--text-heading);
+  line-height: 1.3;
+}
+
+.teaser-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.teaser-action-wrapper {
+  margin-top: 1rem;
+}
